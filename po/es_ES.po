@@ -1,0 +1,620 @@
+# Spanish Phamm Translation
+# Copyright (c) 2004,2008 Alessandro De Zorzi, Mirko Grava
+# This file is distributed under the same license as the Phamm package.
+#
+# FIRST jonhattan <jonhattan@faita.net>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: phamm 0.5.13\n"
+"POT-Creation-Date: 2016-04-11 11:46+0200\n"
+"PO-Revision-Date: 2008-09-22 17:57+0000\n"
+"Last-Translator: jonhattan <jonhattan@faita.net>\n"
+"Language-Team: SPANISH <ES@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: UTF-8Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: ../public/main.php:659
+#, php-format
+msgid "%s not added!"
+msgstr "¡%s no añadido!"
+
+#: ../views/helpers.php:1093
+msgid "...execute a command"
+msgstr "...ejecuta un comando"
+
+#: ../views/helpers.php:844
+msgid "Account"
+msgstr "Cuenta"
+
+#: ../public/main.php:653
+#, php-format
+msgid "Account %s successfully added"
+msgstr "Cuenta %s añadida satisfactoriamente"
+
+#: ../views/helpers.php:304
+#, php-format
+msgid "Account <span class=\"badge\">%d/"
+msgid_plural "Accounts <span class=\"badge\">%d/"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../views/helpers.php:306
+#, php-format
+msgid "Account <span class=\"badge\">%d</span>"
+msgid_plural "Accounts <span class=\"badge\">%d</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../public/main.php:411
+msgid "Account or Alias already exists"
+msgstr "Cuenta o Alias ya existente"
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/alias.xml:44 ../plugins/mail.xml:59 ../plugins/mail.xml:132
+#, no-wrap
+msgid "Active"
+msgstr "Activo"
+
+#: ../views/helpers.php:1263
+msgid "Add catch-all address"
+msgstr "Añadir una dirección cógelo-todo"
+
+#: ../views/helpers.php:814 ../views/helpers.php:839
+msgid "Add new account"
+msgstr "Añadir nueva cuenta"
+
+#: ../views/helpers.php:408 ../views/helpers.php:742
+msgid "Add new domain"
+msgstr "Añadir nuevo dominio"
+
+#: ../views/helpers.php:952
+msgid "All"
+msgstr "Todo"
+
+#: ../views/helpers.php:932
+msgid "All domains"
+msgstr "Todos los dominios"
+
+#: ../public/main.php:372
+#, php-format
+msgid "An Unexpected Error Occurred during %s Addition!"
+msgstr ""
+
+#: ../views/helpers.php:76
+msgid "Are you shure want delete this element?"
+msgstr ""
+
+#: ../public/main.php:113
+msgid "Bye!"
+msgstr "¡Adiós!"
+
+# type: Content of: <plugin><postmaster><attributes><attribute><prettyName>
+#. type: Content of: <plugin><postmaster><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:91
+#, no-wrap
+msgid "Can edit Accounts"
+msgstr "Puede editar Cuentas"
+
+# type: Content of: <plugin><domain><attributes><attribute><prettyName>
+#. type: Content of: <plugin><domain><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:66
+#, no-wrap
+msgid "Can edit Anti-Virus"
+msgstr "Puede editar Anti-Virus"
+
+#: ../public/main.php:100
+msgid "Can't contact LDAP server"
+msgstr "No puedo contactar con el servidor LDAP"
+
+#: ../public/main.php:471
+msgid "Catch all"
+msgstr "Cógelo-todo"
+
+#: ../public/main.php:469
+msgid "Catch all active"
+msgstr "Cógelo-todo activo"
+
+#: ../views/helpers.php:1250
+#, fuzzy
+msgid "Catch-all"
+msgstr "Cógelo-todo"
+
+#: ../public/main.php:240
+msgid "Changes have not performed"
+msgstr "Los cambios no se han efectuado"
+
+#: ../lib/ldap.php:257
+msgid "Code "
+msgstr "Código "
+
+#: ../views/helpers.php:308
+msgid "Common Name"
+msgstr "Nombre Común"
+
+#: ../views/helpers.php:759 ../views/helpers.php:856
+msgid "Confirm Password"
+msgstr "Confirma Contraseña"
+
+#: ../public/main.php:73
+msgid "Connection to LDAP Server Failed!"
+msgstr "¡Ha Fallado la Conexión al Servidor LDAP!"
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:298
+#, no-wrap
+msgid "Creation Date"
+msgstr "Fecha de Creación"
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:72 ../plugins/mail.xml:168
+#, no-wrap
+msgid "Delete"
+msgstr "Borrar"
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/alias.xml:39
+#, no-wrap
+msgid "Destination"
+msgstr "Destino"
+
+#: ../views/helpers.php:747
+msgid "Domain"
+msgstr "Dominio"
+
+#: ../public/main.php:362
+#, php-format
+msgid "Domain %s successfully added"
+msgstr "Dominio %s añadido satisfactoriamente"
+
+#: ../views/helpers.php:176
+#, php-format
+msgid "Domain <span class=\"badge\">%d</span>"
+msgid_plural "Domains <span class=\"badge\">%d</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../public/main.php:457
+msgid "Domain property"
+msgstr "Propiedades del dominio"
+
+#: ../views/helpers.php:118
+msgid "Enter domain or e-mail"
+msgstr ""
+
+#: ../views/helpers.php:1410
+msgid "Error: "
+msgstr "Error: "
+
+#: ../views/helpers.php:1112
+msgid "Execute command"
+msgstr "Ejecuta el comando"
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/person.xml:48
+#, no-wrap
+msgid "FAX"
+msgstr "FAX"
+
+# type: Content of: <plugin><postmaster><attributes><attribute><prettyName>
+#. type: Content of: <plugin><postmaster><attributes><attribute><prettyName>
+#: ../plugins/ftp.xml:71
+#, no-wrap
+msgid "FTP Quota Mb"
+msgstr "FTP Cuota Mb"
+
+# type: Content of: <plugin><postmaster><attributes><attribute><prettyName>
+#. type: Content of: <plugin><postmaster><attributes><attribute><prettyName>
+#: ../plugins/ftp.xml:65
+#, no-wrap
+msgid "FTP Status"
+msgstr ""
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:211
+#, no-wrap
+msgid "Forward Active"
+msgstr "Reenvío Activo"
+
+# type: Content of: <plugin><postmaster><attributes><attribute><prettyName>
+#. type: Content of: <plugin><postmaster><attributes><attribute><prettyName>
+#: ../plugins/ftp.xml:39
+#, no-wrap
+msgid "GID number"
+msgstr ""
+
+#: ../public/main.php:102
+msgid "Generic Error: "
+msgstr "Error Genérico: "
+
+# type: Content of: <plugin><postmaster><attributes><attribute><prettyName>
+#. type: Content of: <plugin><postmaster><attributes><attribute><prettyName>
+#: ../plugins/ftp.xml:45
+#, no-wrap
+msgid "Home Directory"
+msgstr "Directorio Personal"
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/person.xml:40
+#, no-wrap
+msgid "Home Phone"
+msgstr "Teléfono de Casa"
+
+#: ../lib/ldap.php:257
+msgid "LDAP Error: "
+msgstr "Error LDAP: "
+
+#: ../views/helpers.php:126
+msgid "Login"
+msgstr ""
+
+#: ../views/helpers.php:117
+msgid "Login Name"
+msgstr ""
+
+#: ../public/main.php:98
+msgid "Login Username or Password not valid."
+msgstr "Usuario o Contraseña no válido."
+
+#: ../public/main.php:184
+#, php-format
+msgid "Logout %s"
+msgstr ""
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:162
+#, no-wrap
+msgid "Mail Autoreply"
+msgstr "Autorespuesta de Correo"
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:147
+#, no-wrap
+msgid "Mailbox"
+msgstr "Buzón"
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:218
+#, no-wrap
+msgid "Maildrop"
+msgstr ""
+
+# type: Content of: <plugin><domain><attributes><attribute><prettyName>
+#. type: Content of: <plugin><domain><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:45
+#, no-wrap
+msgid "Max Quota"
+msgstr "Max Cuota"
+
+#. type: Content of: <plugin><domain><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:52
+#, no-wrap
+msgid "Max Smtp Auth"
+msgstr ""
+
+# type: Content of: <plugin><domain><attributes><attribute><prettyName>
+#. type: Content of: <plugin><domain><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:38
+#, no-wrap
+msgid "Max number of Alias"
+msgstr "Número máximo de Alias"
+
+# type: Content of: <plugin><domain><attributes><attribute><prettyName>
+#. type: Content of: <plugin><domain><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:31
+#, no-wrap
+msgid "Max number of Mail"
+msgstr "Número máximo de Mail"
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/person.xml:44
+#, no-wrap
+msgid "Mobile"
+msgstr "Móvil"
+
+#: ../views/helpers.php:837
+msgid "Modify account"
+msgstr "Modificar cuenta"
+
+#: ../views/helpers.php:740
+msgid "Modify domain"
+msgstr "Modificar dominio"
+
+#: ../views/helpers.php:1014 ../views/helpers.php:1015
+msgid "NO"
+msgstr ""
+
+#: ../views/helpers.php:859
+msgid "Name"
+msgstr "Nombre"
+
+#: ../public/main.php:525
+msgid "Name is not valid"
+msgstr "Nombre no válido"
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:177
+#, no-wrap
+msgid "Other Transport"
+msgstr "Otro Transporte"
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/person.xml:52
+#, no-wrap
+msgid "Pager"
+msgstr "Paginador"
+
+#: ../views/helpers.php:122 ../views/helpers.php:123 ../views/helpers.php:756
+#: ../views/helpers.php:853
+msgid "Password"
+msgstr "Contraseña"
+
+#: ../controllers/helpers.php:178
+msgid "Password too short!"
+msgstr "¡Contraseña demasiado corta!"
+
+#: ../controllers/helpers.php:175
+msgid "Passwords don't match!"
+msgstr "¡Las contraseñas no coinciden!"
+
+# type: Content of: <plugin><domain><attributes><attribute><prettyName>
+#. type: Content of: <plugin><domain><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:81
+#, no-wrap
+msgid "Postfix Transport"
+msgstr ""
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/proxy.xml:42
+#, no-wrap
+msgid "Proxy Host"
+msgstr ""
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:124
+#, no-wrap
+msgid "Quota"
+msgstr "Cuota"
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/alias.xml:51 ../plugins/mail.xml:117
+#, no-wrap
+msgid "SMTP Auth"
+msgstr ""
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/alias.xml:65 ../plugins/mail.xml:230
+#, no-wrap
+msgid "SPAM Check"
+msgstr "Chequear SPAM"
+
+#: ../public/main.php:437
+msgid "SPAM Tags level are not set correctly!"
+msgstr "¡el nivel de las etiquetas SPAM no se ha establecido correctamente!"
+
+#: ../views/helpers.php:1099
+msgid "Set"
+msgstr "Establecer"
+
+#: ../views/helpers.php:126
+msgid "Sign in"
+msgstr ""
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:238
+#, no-wrap
+msgid "Spam Kill Level"
+msgstr ""
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:278
+#, no-wrap
+msgid "Spam Tag Level"
+msgstr ""
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:258
+#, no-wrap
+msgid "Spam Tag2 Level"
+msgstr ""
+
+#: ../public/main.php:413
+msgid "Special Characters not Allowed in E-mail address"
+msgstr "No se permiten caracteres especiales en la dirección de correo"
+
+#: ../views/helpers.php:862
+msgid "Surname"
+msgstr "Apellidos"
+
+#: ../public/main.php:527
+msgid "Surname is not valid"
+msgstr "Apellidos no válidos"
+
+#: ../public/main.php:257
+msgid "Syntax not valid or special chars found in domain name"
+msgstr ""
+"La sintaxis no es válida, o se han encontrado caracteres especiales en el "
+"nombre del dominio"
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/person.xml:36
+#, no-wrap
+msgid "Telephone"
+msgstr "Teléfono"
+
+#: ../public/main.php:415
+#, php-format
+msgid "The maximum number of accounts (%s) has been reached or exceeded!"
+msgstr ""
+
+#: ../controllers/helpers.php:94
+#, php-format
+msgid "The maximum number of attribute %s (%s) has been reached or exceeded!"
+msgstr ""
+
+#: ../views/helpers.php:494
+#, php-format
+msgid ""
+"The maximum number of attribute %s (%s) has been reached or exceeded. "
+"Attribute has been disabled!"
+msgstr ""
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/ftp.xml:52 ../plugins/mail.xml:154
+#, no-wrap
+msgid "UID"
+msgstr ""
+
+# type: Content of: <plugin><postmaster><attributes><attribute><prettyName>
+#. type: Content of: <plugin><postmaster><attributes><attribute><prettyName>
+#: ../plugins/ftp.xml:59
+#, no-wrap
+msgid "UID Number"
+msgstr ""
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:183
+#, no-wrap
+msgid "Vacation"
+msgstr "Vacaciones"
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:205
+#, no-wrap
+msgid "Vacation End"
+msgstr "Fin de Vacaciones"
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:194
+#, no-wrap
+msgid "Vacation Forward"
+msgstr "Reenvío de Vacaciones"
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:189
+#, no-wrap
+msgid "Vacation Info"
+msgstr "Información de Vacaciones"
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:199
+#, no-wrap
+msgid "Vacation Start"
+msgstr "Inicio de Vacaciones"
+
+#: ../views/helpers.php:65 ../views/helpers.php:133
+#, php-format
+msgid "Ver. %s"
+msgstr ""
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/mail.xml:140
+#, no-wrap
+msgid "Virtual Home"
+msgstr "Home Virtual"
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/alias.xml:58 ../plugins/mail.xml:222
+#, no-wrap
+msgid "Virus Check"
+msgstr "Chequeo de Virus"
+
+#: ../views/helpers.php:1415
+msgid "Warning: "
+msgstr "Alerta: "
+
+# type: Content of: <plugin><account><attributes><attribute><prettyName>
+#. type: Content of: <plugin><account><attributes><attribute><prettyName>
+#: ../plugins/proxy.xml:36
+#, no-wrap
+msgid "Web Access"
+msgstr "Acceso Web"
+
+#: ../views/helpers.php:1014 ../views/helpers.php:1015
+msgid "YES"
+msgstr "SÍ"
+
+#: ../views/helpers.php:1481
+msgid ""
+"You will be automatically redirected to a new page within a few seconds.<br/"
+"> If this does not happen, please follow the link:"
+msgstr ""
+"Serás redirigido a una nueva página en los próximos segundos.<br/> Si esto "
+"no ocurre por favor sigue el enlace:"
+
+#: ../public/main.php:821
+#, php-format
+msgid "account %s not updated!"
+msgstr "¡cuenta %s no actualizada!"
+
+#: ../views/helpers.php:1481
+msgid "click here"
+msgstr "haz click aquí"
+
+#: ../public/main.php:439
+msgid "do not activate Forward and Vacation Forward in the same time!"
+msgstr "¡no actives Reenvío y Reenvío de Vacaciones al mismo tiempo!"
+
+#: ../public/main.php:367
+#, php-format
+msgid "domain %s not added!"
+msgstr "¡dominio %s no añadido!"
+
+#: ../public/main.php:223
+#, php-format
+msgid "modifying %s"
+msgstr ""
+
+#: ../public/main.php:441
+msgid "please, insert a forward destination or disable Forward!"
+msgstr "¡por favor, inserta un destino para el reenvío o desactiva el Reenvío!"
+
+#~ msgid "Password contains special chars"
+#~ msgstr "La contraseña contiene caracteres especiales"
+
+#~ msgid "%s modified"
+#~ msgstr "%s modificado"
+
+#~ msgid "...select an action"
+#~ msgstr "...selecciona una acción"
+
+#~ msgid "Account (%d)"
+#~ msgid_plural "Accounts (%d)"
+#~ msgstr[0] "Cuenta (%d)"
+#~ msgstr[1] "Cuentas (%d)"
+
+#~ msgid "Domain (%d)"
+#~ msgid_plural "Domains (%d)"
+#~ msgstr[0] "Dominio (%d)"
+#~ msgstr[1] "Dominios (%d)"
