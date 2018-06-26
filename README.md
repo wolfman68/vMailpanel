@@ -1,23 +1,22 @@
-PHP LDAP Virtual Hosting Manager
-================================
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;; vMailpanel - README
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-  Copyright (c) 2005-2016 Alessandro De Zorzi, Mirko Grava
-  <team@phamm.org> http://www.phamm.org/
-  
-  Project sponsored by RHX Srl - www.rhx.it
+  Copyright (c) 2018 Wolfman68
+  https://github.com/wolfman68/vMailpanel
 
-  Permission is granted to copy, distribute and/or modify this document
-  under the terms of the GNU Free Documentation License, Version 1.2
-  or any later version published by the Free Software Foundation;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
- Phamm provides an useful PHP front-end with multi-role access to manage
- virtual services using a LDAP back-end. Phamm works with a plug-in system,
- the typical service is a mail server with virtual mail domain support
- but other plug-ins are available (ftp, proxy...). It is easy create or
- customize existing plug-ins for Phamm using XML descriptor files.
+vMailpanel is a fork of Phamm http://phamm.org
 
- Phamm back-end require own phamm.schema and custom ACL.
-# vMailpanel
-# vMailpanel
-# vMailpanel
-# vMailpanel
+vMailpanel is backwards compatible with Phamm but differs from Pham in that
+you can create a postmaster account and also an abuse and spam alias created
+that point to postmaster@domain.tld.
+
+vMailpanel is a PHP front-end with multi-role access to manage
+virtual services using a LDAP back-end. vMailpanel works with a plug-in system,
+the typical service is for email with virtual mail domain support
+but other plug-ins are available (ftp, proxy...).
+It is easy create or customize existing plug-ins for vMailpanel using XML descriptor
+files or adapt existing ones to suit your needs.
+
