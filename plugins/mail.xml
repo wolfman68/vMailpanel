@@ -117,13 +117,13 @@
 				<prettyName>SMTP Auth</prettyName>
 				<bool>1</bool>
 				<table>1</table>
-				<default>FALSE</default>
+				<default>TRUE</default>
 				<minAuthLevel>4</minAuthLevel>
 			</attribute>
 			<attribute name="quota">
 				<prettyName>Quota</prettyName>
 				<table>1</table>
-				<default>2</default>
+				<default>10</default>
 				<multiplier>1073741824</multiplier>
 				<suffix></suffix>
 				<minAuthLevel>4</minAuthLevel>
