@@ -1,0 +1,12 @@
+dn: o=hosting,dc=example,dc=tld
+objectClass: organization
+objectClass: top
+o: hosting description: Hosting Organization
+# Read only account
+
+dn: cn=phamm,o=hosting,dc=example,dc=tld
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+cn: vmail
+userPassword: {MD5}uqS335b6i3t4ezLd2upX7Q==
+description: Read only account
