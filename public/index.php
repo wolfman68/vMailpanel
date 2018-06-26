@@ -325,7 +325,7 @@ case "insert_domain" :
             }
         }
 
-        $entry["cn"] = "Administrator";
+        $entry["cn"] = "Postmaster";
         $entry["sn"] = "Administrator";
         $entry["mail"] = "administrator@".$domain_new;
         $entry["userPassword"]  = phamm_password_hash($password1);
@@ -343,7 +343,55 @@ case "insert_domain" :
 	// Add postmaster alias
         $r_p = PhammLdap::phamm_add ('cn=postmaster,vd='.$domain_new.','.LDAP_BASE,$entry);
 
-	$entry_abuse["objectclass"][0]	= "top";
+// Add postmaster email
+        
+//        $entry_postmaster["mail"] = "postmaster@".$domain_new;
+//        $entry_postmaster["maildrop"] = "postmaster@".$domain_new;
+//        $entry_postmaster["userPassword"] = phamm_password_hash($password1);
+//        $entry_postmaster["sn"] = Postmaster;
+//        $entry_postmaster["givenname"] = $domain_new;
+//        $entry_postmaster["cn"] = $givenName.' '.$sn;
+//        $entry_postmaster["lastChange"] = time();
+//        $entry_postmaster["creationDate"] = date('YmdHi');
+
+//	$entry_postmaster = purge_empty_values($entry_postmaster);
+
+        // Purge empty values and multiplier
+//        foreach ( $confirm as $p_name )
+//        {
+	    // Clear and purge values
+//            $values_purged = purge_empty_values($values[$p_name],$pv[$p_name]["ACCOUNT"]["ATTRIBUTES"]);
+//	    $values_multi_purged_one = purge_empty_values($values_multi[$p_name]);
+//	    $values_date_purged_one = purge_empty_values($values_date[$p_name]);
+
+	    // Merge values for each plugin
+  //          $entry_postmaster = array_merge($entry,$values_purged);
+//
+//            $values_multi_purged = array_merge($values_multi_purged,$values_multi_purged_one);
+//            $values_date_purged = array_merge($values_date_purged,$values_date_purged_one);
+//        }
+
+	// Values from textarea...
+//	if ($values_multi_purged)
+//	{
+//	    foreach ($values_multi_purged as $mv_name => $mv_array)
+//	    {
+//		$delimitators = array(" ",";","\t",":","\n");
+//		$values_multi_string = str_replace($delimitators,",","$mv_array");
+
+		// Purge persistent \r
+//		$values_multi_string = str_replace("\r","","$values_multi_string");
+
+//		$values_multi_array = explode (",",$values_multi_string);
+
+//		for ($i=0; $i < count($values_multi_array); $i++)
+//		    $entry[$mv_name][$i] = $values_multi_array[$i];
+//	    }
+//	}
+
+//        $r = PhammLdap::phamm_add ('mail='.$mail.',vd='.$domain_new.','.LDAP_BASE,$entry);
+	        
+        $entry_abuse["objectclass"][0]	= "top";
         $entry_abuse["objectclass"][1]	= "VirtualMailAlias";
         $entry_abuse["cn"] = "Abuse";
         $entry_abuse["sn"] = "Abuse";

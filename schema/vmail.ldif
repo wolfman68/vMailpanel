@@ -1,0 +1,133 @@
+# AUTO-GENERATED FILE - DO NOT EDIT!! Use ldapmodify.
+# CRC32 9fab53e3
+dn: cn=vmail,cn=schema,cn=config
+objectClass: olcSchemaConfig
+cn: vmail
+olcAttributeTypes: {0}( 1.3.6.1.4.1.22339.1.1.1 NAME 'postfixTransport' DESC
+  'A string directing postfix which transport to use' EQUALITY caseExactIA5M
+ atch SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{20} SINGLE-VALUE )
+olcAttributeTypes: {1}( 1.3.6.1.4.1.22339.1.1.2 NAME 'accountActive' DESC 'A
+  boolean telling whether an account is active or not' EQUALITY booleanMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7 SINGLE-VALUE )
+olcAttributeTypes: {2}( 1.3.6.1.4.1.22339.1.1.3 NAME 'lastChange' DESC 'Time
+  in unix time of last change in entry' SYNTAX 1.3.6.1.4.1.1466.115.121.1.27
+  SINGLE-VALUE )
+olcAttributeTypes: {3}( 1.3.6.1.4.1.22339.1.1.4 NAME 'vd' DESC 'A virtual do
+ main managed by Phamm' EQUALITY caseIgnoreIA5Match SUBSTR caseIgnoreIA5Subs
+ tringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+olcAttributeTypes: {4}( 1.3.6.1.4.1.22339.1.1.5 NAME 'mailbox' DESC 'The abs
+ olute path to the mailbox for a mail account in a non-default location' EQU
+ ALITY caseExactIA5Match SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+olcAttributeTypes: {5}( 1.3.6.1.4.1.22339.1.1.6 NAME 'quota' DESC 'A string 
+ that represents the quota on a mailbox' EQUALITY caseExactIA5Match SYNTAX 1
+ .3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+olcAttributeTypes: {6}( 1.3.6.1.4.1.22339.1.1.7 NAME 'clearPassword' DESC 'A
+  separate text that stores the mail account password in clear text' EQUALIT
+ Y octetStringMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.40{128} )
+olcAttributeTypes: {7}( 1.3.6.1.4.1.22339.1.1.8 NAME 'maildrop' DESC 'RFC822
+  Mailbox - mail alias' EQUALITY caseIgnoreIA5Match SUBSTR caseIgnoreIA5Subs
+ tringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} )
+olcAttributeTypes: {8}( 1.3.6.1.4.1.22339.1.1.9 NAME 'mailsource' DESC 'Mess
+ age source' EQUALITY caseIgnoreIA5Match SUBSTR caseIgnoreIA5SubstringsMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 )
+olcAttributeTypes: {9}( 1.3.6.1.4.1.22339.1.1.10 NAME 'editAliases' DESC 'A 
+ boolean telling whether a domain manager can edit Aliases' EQUALITY boolean
+ Match SYNTAX 1.3.6.1.4.1.1466.115.121.1.7 SINGLE-VALUE )
+olcAttributeTypes: {10}( 1.3.6.1.4.1.22339.1.1.11 NAME 'editAccounts' DESC '
+ A boolean telling whether a domain manager can edit Accounts' EQUALITY bool
+ eanMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.7 SINGLE-VALUE )
+olcAttributeTypes: {11}( 1.3.6.1.4.1.22339.1.1.12 NAME 'editAV' DESC 'A bool
+ ean telling whether a domain manager can edit Antivirus' EQUALITY booleanMa
+ tch SYNTAX 1.3.6.1.4.1.1466.115.121.1.7 SINGLE-VALUE )
+olcAttributeTypes: {12}( 1.3.6.1.4.1.22339.1.1.13 NAME 'delete' DESC 'A bool
+ ean telling whether this item is marked for deletion' EQUALITY booleanMatch
+  SYNTAX 1.3.6.1.4.1.1466.115.121.1.7 SINGLE-VALUE )
+olcAttributeTypes: {13}( 1.3.6.1.4.1.22339.1.1.14 NAME 'forwardActive' DESC 
+ 'A boolean telling whether this item is using forward' EQUALITY booleanMatc
+ h SYNTAX 1.3.6.1.4.1.1466.115.121.1.7 SINGLE-VALUE )
+olcAttributeTypes: {14}( 1.3.6.1.4.1.22339.1.1.15 NAME 'maxDomain' DESC 'A s
+ tring that represents the max domain for a VirtualAdmin' EQUALITY caseExact
+ IA5Match SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+olcAttributeTypes: {15}( 1.3.6.1.4.1.22339.1.1.16 NAME 'maxMail' DESC 'A str
+ ing that represents the max mail for a VirtualAdmin' EQUALITY caseExactIA5M
+ atch SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+olcAttributeTypes: {16}( 1.3.6.1.4.1.22339.1.1.17 NAME 'maxAlias' DESC 'A st
+ ring that represents the max alias for a VirtualAdmin' EQUALITY caseExactIA
+ 5Match SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+olcAttributeTypes: {17}( 1.3.6.1.4.1.22339.1.1.18 NAME 'maxQuota' DESC 'A st
+ ring that represents the max quota for a VirtualAdmin' EQUALITY caseExactIA
+ 5Match SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+olcAttributeTypes: {18}( 1.3.6.1.4.1.22339.1.1.19 NAME 'adminID' DESC 'A str
+ ing that represents the dn of admin domain' EQUALITY caseExactIA5Match SYNT
+ AX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+olcAttributeTypes: {19}( 1.3.6.1.4.1.22339.1.1.20 NAME 'vdHome' DESC 'The ab
+ solute path to the virtual domain home' EQUALITY caseExactIA5Match SYNTAX 1
+ .3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+olcAttributeTypes: {20}( 1.3.6.1.4.1.22339.1.1.21 NAME 'otherTransport' DESC
+  'A string directing postfix which transport to use' EQUALITY caseExactIA5M
+ atch SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{20} SINGLE-VALUE )
+olcAttributeTypes: {21}( 1.3.6.1.4.1.22339.1.1.22 NAME 'creationDate' DESC '
+ Timestamp of creation' EQUALITY integerMatch SYNTAX 1.3.6.1.4.1.1466.115.12
+ 1.1.27{14} SINGLE-VALUE )
+olcAttributeTypes: {22}( 1.3.6.1.4.1.22339.1.1.23 NAME 'otherPath' DESC 'Thi
+ s path to help any application' EQUALITY caseExactIA5Match SYNTAX 1.3.6.1.4
+ .1.1466.115.121.1.26 SINGLE-VALUE )
+olcAttributeTypes: {23}( 1.3.6.1.4.1.22339.1.1.24 NAME 'createMaildir' DESC 
+ 'A boolean telling when we must create Maildir for maildrop transport' EQUA
+ LITY booleanMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.7 SINGLE-VALUE )
+olcAttributeTypes: {24}( 1.3.6.1.4.1.22339.1.1.25 NAME 'smtpAuth' DESC 'A bo
+ olean telling when we could do smtp-auth' EQUALITY booleanMatch SYNTAX 1.3.
+ 6.1.4.1.1466.115.121.1.7 SINGLE-VALUE )
+olcAttributeTypes: {25}( 1.3.6.1.4.1.22339.1.1.26 NAME 'expireDate' DESC 'Ex
+ pire date' EQUALITY integerMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.27{14} S
+ INGLE-VALUE )
+olcAttributeTypes: {26}( 1.3.6.1.4.1.22339.1.1.27 NAME 'mailAutoreply' DESC 
+ 'RFC822 Mailbox - mail for autoreply' EQUALITY caseIgnoreIA5Match SUBSTR ca
+ seIgnoreIA5SubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} )
+olcAttributeTypes: {27}( 1.3.6.1.4.1.22339.1.1.28 NAME 'bypassGreyListing' D
+ ESC 'A boolean telling when we could bypass Grey Listing' EQUALITY booleanM
+ atch SYNTAX 1.3.6.1.4.1.1466.115.121.1.7 SINGLE-VALUE )
+olcAttributeTypes: {28}( 1.3.6.1.4.1.22339.1.1.29 NAME 'phammGroup' DESC 'De
+ fine the phamm Group of the VirtualMailAccount' EQUALITY caseIgnoreMatch SU
+ BSTR caseIgnoreSubstringsMatch SYNTAX 1.3.6.1.4.1.1466.115.121.1.15{256} )
+olcAttributeTypes: {29}( 1.3.6.1.4.1.22339.1.1.30 NAME 'maxSmtpAuth' DESC 'A
+  string that represents the max SMTP Auth for a VirtualAdmin' EQUALITY case
+ ExactIA5Match SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+olcAttributeTypes: {30}( 1.3.6.1.4.1.22339.1.1.31 NAME 'maxAntivirus' DESC '
+ A string that represents the max Antivirus for a VirtualAdmin' EQUALITY cas
+ eExactIA5Match SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+olcAttributeTypes: {31}( 1.3.6.1.4.1.22339.1.1.32 NAME 'maxAntiSpam' DESC 'A
+  string that represents the max AntiSpam for a VirtualAdmin' EQUALITY caseE
+ xactIA5Match SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+olcAttributeTypes: {32}( 1.3.6.1.4.1.22339.1.1.33 NAME 'maxGreyList' DESC 'A
+  string that represents the max AntiGreyList for a VirtualAdmin' EQUALITY c
+ aseExactIA5Match SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+olcObjectClasses: {0}( 1.3.6.1.4.1.22339.1.2.1 NAME 'VirtualMailAccount' DES
+ C 'Mail account objects' SUP inetOrgPerson STRUCTURAL MUST ( mail $ vdHome 
+ $ mailbox $ accountActive $ lastChange $ delete ) MAY ( quota $ otherTransp
+ ort $ editAccounts $ creationDate $ createMaildir $ smtpAuth $ expireDate $
+  mailAutoreply $ bypassGreyListing $ phammGroup ) )
+olcObjectClasses: {1}( 1.3.6.1.4.1.22339.1.2.2 NAME 'VirtualMailAlias' DESC 
+ 'Mail aliasing/forwarding entry' SUP inetOrgPerson STRUCTURAL MUST ( mail $
+  maildrop $ accountActive $ lastChange ) MAY ( mailsource $ editAccounts $ 
+ creationDate $ smtpAuth $ expireDate $ bypassGreyListing ) )
+olcObjectClasses: {2}( 1.3.6.1.4.1.22339.1.2.3 NAME 'VirtualDomain' DESC 'Vi
+ rtual Domain entry to be used with postfix transport maps' SUP top STRUCTUR
+ AL MUST ( vd $ accountActive $ lastChange $ delete ) MAY ( postfixTransport
+  $ description $ maxMail $ maxAlias $ maxQuota $ editAV $ adminID $ creatio
+ nDate $ bypassGreyListing $ maxSmtpAuth $ maxAntivirus $ maxAntiSpam $ maxG
+ reyList ) )
+olcObjectClasses: {3}( 1.3.6.1.4.1.22339.1.2.4 NAME 'VirtualForward' DESC 'F
+ orward setting for VirtualMailAccount' SUP top AUXILIARY MUST forwardActive
+  MAY maildrop )
+olcObjectClasses: {4}( 1.3.6.1.4.1.22339.1.2.5 NAME 'VirtualAdmin' DESC 'Vir
+ tual Admin entry' SUP inetOrgPerson STRUCTURAL MUST ( mail $ maxDomain $ ac
+ countActive $ lastChange ) MAY ( vd $ editAccounts ) )
+olcObjectClasses: {5}( 1.3.6.1.4.1.22339.1.2.6 NAME 'VirtualBackupDomain' DE
+ SC 'Virtual Backup Domain entry to be used for relay' SUP top STRUCTURAL MU
+ ST ( vd $ accountActive $ lastChange $ delete ) MAY description )
+olcObjectClasses: {6}( 1.3.6.1.4.1.22339.1.2.7 NAME 'VirtualBackupMail' DESC
+  'Virtual Backup Mail entry to be used for relay' SUP top STRUCTURAL MUST (
+  mail $ accountActive $ lastChange ) MAY description )
+olcObjectClasses: {7}( 1.3.6.1.4.1.22339.1.2.8 NAME 'Yap' DESC 'Yet another 
+ path' SUP top AUXILIARY MUST otherPath )

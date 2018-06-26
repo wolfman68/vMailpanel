@@ -41,7 +41,7 @@ function page_start()
 	$tag .= ' - '.str_replace('_',' ',$action);
     $tag .= '</title>'."\n";
 //    $tag .= "\t".'<style type="text/css" media="all">@import "./style/main.css";</style>'."\n";
-    $tag .= "\t".'<script type="text/javascript" src="functions.js"></script>'."\n";
+    $tag .= "\t".'<script type="text/javascript" src="./js/functions.js"></script>'."\n";
     $tag .= "\t".'<meta name="viewport" content="width=device-width, initial-scale=1.0">'."\n";
     $tag .= "\t".'<meta http-equiv="Content-Type" content="text/html; charset=utf-8">'."\n";
     $tag .= "\t".'<link href="style/bootstrap.min.css" rel="stylesheet" media="screen">'."\n";

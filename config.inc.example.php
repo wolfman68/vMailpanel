@@ -134,7 +134,7 @@ $plugins_exclusion = array("mail","alias");
 // *============================*
 
 // Phamm Version (+ indicate a SVN version)
-define ('VERSION','0.6.7');
+define ('VERSION','0.9');
 
 // Useful if you want hide the version [0,1]
 define ('HIDE_VERSION',0);
@@ -175,7 +175,7 @@ define ('PHAMM_LOG',0);
 define ('LOG_FILE','/var/log/phamm.log');
 
 // Standard LDAP encryption type [CRYPT,MD5,CLEAR]
-define ('ENC_TYPE','CRYPT');
+define ('ENC_TYPE','MD5');
 
 // Standard Crypt salt [RANDOM, PASSWORD, SALT]
 //   RANDOM - Choose a random salt

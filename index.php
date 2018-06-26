@@ -326,11 +326,11 @@ case "insert_domain" :
             }
         }
 
-        $entry["cn"] = "Administrator";
+        $entry["cn"] = "Pstmaster";
         $entry["sn"] = "Administrator";
-        $entry["mail"] = "administrator@".$domain_new;
+//        $entry["mail"] = "administrator@".$domain_new;
         $entry["userPassword"]  = phamm_password_hash($password1);
-        $entry["maildrop"] = "postmaster@".$domain_new;
+//        $entry["maildrop"] = "postmaster@".$domain_new;
         $entry["accountActive"]		= "TRUE";
         $entry["creationDate"]		= date('Ymd');
         $entry["lastChange"]		= time();

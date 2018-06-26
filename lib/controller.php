@@ -140,7 +140,7 @@ case "domain" :
 
 case "postmaster" :
 
-    foreach ($values as $key => $value)
+//    foreach ($values as $key => $value)
     {
         // Create right DN
         // $dn = 'cn=postmaster,vd='.$key.','.LDAP_BASE;
