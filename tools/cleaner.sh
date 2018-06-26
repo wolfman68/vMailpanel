@@ -1,69 +1,57 @@
 #!/bin/bash
 #
-# Phamm - http://www.phamm.org - <team@phamm.org>
-# Copyright (C) 2004-2008 Alessandro De Zorzi and Mirko Grava
+# Use this script to:
 # 
-# Phamm is free software; you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation; either version 2 of the License, or
-# (at your option) any later version.
-#
-# Phamm is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
+# Delete mailbox(es) marked for deletion from:
+#   - the ldap directory
+#   - the physical mailbox(es)
 # 
-# You should have received a copy of the GNU General Public License
-# along with this program; if not, write to the Free Software
+# Delete domain(s) marked for deletion from:
+#   - the ldap directory
+#   - the physical domain(s) directory
+# 
 
-LDAPURI="ldap://ldap.example.com:389/"
+# Replace example tld with your actual domain name
+LDAPURI="ldap://localhost:389/"
 BINDDN="cn=admin,dc=example,dc=tld"
-BINDPW="rhx"
+BINDPW="password"
 LDAP_BASE="o=hosting,dc=example,dc=tld"
-OUTPUT="$HOME/bin/lista"
-
-if [ ! -d ~/bin ]; then
-    mkdir ~/bin
-fi
-
-if [ ! -d ~/tmp ]; then
-    mkdir ~/tmp
-fi
+OUTPUT="delete/list"
 
 touch $OUTPUT
 # find mail to delete
-ldapsearch -H $LDAPURI -D $BINDDN -w $BINDPW -b $LDAP_BASE -x -LLL "(&(objectClass=VirtualMailAccount)(delete=TRUE))" mailbox > ~/tmp/mb$$
+ldapsearch -H $LDAPURI -D $BINDDN -w $BINDPW -b $LDAP_BASE -x -LLL "(&(objectClass=VirtualMailAccount)(delete=TRUE))" mailbox > delete/mb$$
 # create file for awk
 sed \
 -e ':a' \
 -e '$!N;s/\n //;ta' \
 -e 'P;D' \
-~/tmp/mb$$ > ~/tmp/mb$$.1
+delete/mb$$ > delete/mb$$.1
 
-cat ~/tmp/mb$$.1 | awk '{
+cat delete/mb$$.1 | awk '{
 			if ($1 == "dn:")
 			{ print "ldapdelete -H \"'$LDAPURI'\" -D \"'$BINDDN'\" -w \"'$BINDPW'\" -x \""$2"\"" > "'$OUTPUT'" }
 			if ($1 == "mailbox:")
-			{ print "rm -rf ~/domains/" $2 > "'$OUTPUT'" } 
+			{ print "rm -rf " $2 > "'$OUTPUT'" } 
 			}'
 
 # find domain to delete
-ldapsearch -H $LDAPURI -D $BINDDN -w $BINDPW -b $LDAP_BASE -x -LLL "(&(objectClass=VirtualDomain)(delete=TRUE))" vd > ~/tmp/vd$$
+ldapsearch -H $LDAPURI -D $BINDDN -w $BINDPW -b $LDAP_BASE -x -LLL "(&(objectClass=VirtualDomain)(delete=TRUE))" vd > delete/vd$$
 # create file for awk
 sed \
 -e ':a' \
 -e '$!N;s/\n //;ta' \
 -e 'P;D' \
-~/tmp/vd$$ > ~/tmp/vd$$.1
+delete/vd$$ > delete/vd$$.1
 
-cat ~/tmp/vd$$ | awk '{
+cat delete/vd$$ | awk '{
 			if ($1 == "dn:")
 			{ print "ldapdelete -H \"'$LDAPURI'\" -D \"'$BINDDN'\" -w \"'$BINDPW'\" -x -r \""$2"\"" > "'$OUTPUT'" }
 			if ($1 == "vd:")
-			{ print "rm -rf ~/domains/" $2 > "'$OUTPUT'" } 
+			{ print "rm -rf " $2 > "'$OUTPUT'" } 
 			}'
 
 # execute and delete temporary files
 chmod 700 $OUTPUT
 $OUTPUT
-rm -rf ~/tmp/mb* ~/tmp/vd* $OUTPUT
+rm -rf delete/mb* delete/vd* $OUTPUT
