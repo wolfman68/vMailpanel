@@ -1,0 +1,92 @@
+smtpd_banner = $myhostname ESMTP $mail_name
+biff = no
+ 
+# appending .domain is the MUA's job.
+append_dot_mydomain = no
+ 
+# Uncomment the next line to generate "delayed mail" warnings
+delay_warning_time = 4h
+ 
+# TLS parameters
+smtpd_tls_cert_file = /etc/postfix/ssl/smtpd.crt
+smtpd_tls_key_file = /etc/postfix/ssl/smtpd.key
+smtpd_use_tls = yes
+smtpd_tls_session_cache_database = btree:${queue_directory}/smtpd_scache
+smtp_tls_session_cache_database = btree:${queue_directory}/smtp_scache
+ 
+myhostname = mail.habitat.im
+alias_maps = hash:/etc/aliases,
+alias_database = hash:/etc/aliases
+myorigin = localhost
+relayhost = 
+mynetworks = 127.0.0.0/8
+dovecot_destination_recipient_limit = 1
+mailbox_command = /usr/lib/dovecot/deliver
+mailbox_size_limit = 0
+recipient_delimiter = +
+inet_interfaces = all
+inet_protocols = all
+#smtp_bind_address = your ip address (optional) ==>unmark and change the ip address for your setup.
+smtpd_sasl_local_domain = 
+smtpd_sasl_auth_enable = yes
+smtpd_sasl_security_options = noanonymous
+smtpd_sasl_type = dovecot
+smtpd_sasl_path = private/auth
+broken_sasl_auth_clients = yes
+smtpd_tls_auth_only = no
+
+smtp_use_tls = yes
+smtp_tls_note_starttls_offer = yes
+smtpd_tls_CAfile = /etc/postfix/ssl/cacert.pem
+smtpd_tls_loglevel = 1
+smtpd_tls_received_header = yes
+smtpd_tls_session_cache_timeout = 3600s
+tls_random_source = dev:/dev/urandom
+
+home_mailbox = Maildir/
+ 
+smtpd_recipient_restrictions =
+    permit_mynetworks
+    permit_sasl_authenticated
+    reject_invalid_hostname
+    reject_non_fqdn_hostname
+    reject_non_fqdn_sender
+    reject_non_fqdn_recipient
+    reject_unauth_destination
+    reject_unauth_pipelining
+    reject_invalid_hostname
+    reject_unknown_sender_domain
+    reject_rbl_client list.dsbl.org
+    reject_rbl_client cbl.abuseat.org
+    reject_rhsbl_sender dsn.fc-ignorant.org
+
+smtpd_data_restrictions =
+    reject_unauth_pipelining,
+    reject_multi_recipient_bounce,
+    permit
+
+smtpd_helo_required = yes
+ 
+# transport_maps
+maildrop_destination_concurrency_limit = 2 
+maildrop_destination_recipient_limit = 1
+gnarwl_destination_concurrency_limit = 1 
+gnarwl_destination_recipient_limit = 1
+transport_maps = hash:/etc/postfix/transport, ldap:/etc/postfix/ldap-transport.cf
+mydestination = $transport_maps, localhost, localhost.localdomain, $myhostname, localhost.$mydomain, $mydomain
+
+virtual_alias_maps = 
+    ldap:/etc/postfix/ldap-aliases.cf,
+    ldap:/etc/postfix/ldap-virtualforward.cf,
+    ldap:/etc/postfix/ldap-accountsmap.cf
+ 
+# virtual accounts for delivery
+virtual_mailbox_base = /home/vmail
+virtual_mailbox_maps = ldap:/etc/postfix/ldap-accounts.cf
+virtual_minimum_uid = 1005
+virtual_uid_maps = static:1005
+virtual_gid_maps = static:1005
+ 
+local_recipient_maps = $alias_maps
+
+recipient_bcc_maps = ldap:/etc/postfix/ldap-vacation.cf

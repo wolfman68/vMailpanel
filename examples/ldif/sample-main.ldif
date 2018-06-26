@@ -1,9 +1,0 @@
-dn:dc=example,dc=tld
-objectClass: top
-objectClass: domain
-dc: example
-
-dn:cn=admin,dc=example,dc=tld
-objectClass: top
-objectClass: organizationalRole
-cn: admin

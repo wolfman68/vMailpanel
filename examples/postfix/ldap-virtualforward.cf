@@ -1,0 +1,11 @@
+server_host = localhost
+server_port = 389
+version = 3
+bind = yes
+start_tls = no
+bind_dn = cn=phamm,o=hosting,dc=example,dc=tld
+bind_pw = readonly
+search_base = o=hosting,dc=example,dc=tld
+scope = sub
+query_filter = (&(&(objectClass=VirtualMailAccount)(mail=%s))(vacationActive=FALSE)(forwardActive=TRUE)(accountActive=TRUE)(delete=FALSE))
+result_attribute = maildrop
