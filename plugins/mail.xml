@@ -123,8 +123,8 @@
 			<attribute name="quota">
 				<prettyName>Quota</prettyName>
 				<table>1</table>
-				<default>10</default>
-				<multiplier>1073741824</multiplier>
+				<default>1000</default>
+				<multiplier>1048576</multiplier>
 				<suffix></suffix>
 				<minAuthLevel>4</minAuthLevel>
 			</attribute>
