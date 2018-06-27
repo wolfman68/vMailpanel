@@ -26,9 +26,9 @@ sed \
 -e ':a' \
 -e '$!N;s/\n //;ta' \
 -e 'P;D' \
-delete/mb$$ > delete/mb$$.1
+/tmp/mb$$ > /tmp/mb$$.1
 
-cat delete/mb$$.1 | awk '{
+cat /tmp/mb$$.1 | awk '{
 			if ($1 == "dn:")
 			{ print "ldapdelete -H \"'$LDAPURI'\" -D \"'$BINDDN'\" -w \"'$BINDPW'\" -x \""$2"\"" > "'$OUTPUT'" }
 			if ($1 == "mailbox:")
@@ -36,13 +36,13 @@ cat delete/mb$$.1 | awk '{
 			}'
 
 # find domain to delete
-ldapsearch -H $LDAPURI -D $BINDDN -w $BINDPW -b $LDAP_BASE -x -LLL "(&(objectClass=VirtualDomain)(delete=TRUE))" vd > delete/vd$$
+ldapsearch -H $LDAPURI -D $BINDDN -w $BINDPW -b $LDAP_BASE -x -LLL "(&(objectClass=VirtualDomain)(delete=TRUE))" vd > /tmp/vd$$
 # create file for awk
 sed \
 -e ':a' \
 -e '$!N;s/\n //;ta' \
 -e 'P;D' \
-delete/vd$$ > delete/vd$$.1
+/tmp/vd$$ > /tmp/vd$$.1
 
 cat delete/vd$$ | awk '{
 			if ($1 == "dn:")
