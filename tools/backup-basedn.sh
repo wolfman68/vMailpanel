@@ -1,7 +1,7 @@
 #!/bin/bash
 # save all the base dn in a file .ldif
 ROOTDN="cn=admin,dc=example,dc=tld"
-ROOTPW="rhx"
+ROOTPW="password"
 BASEDN="dc=example,dc=tld"
 LDAPSER="localhost"
 LDAPATH="/root/ldap"

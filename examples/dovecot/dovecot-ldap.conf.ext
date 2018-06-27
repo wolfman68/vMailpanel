@@ -25,10 +25,10 @@ hosts = localhost
 
 # Distinguished Name - the username used to login to the LDAP server.
 # Leave it commented out to bind anonymously (useful with auth_bind=yes).
-dn = cn=phamm,o=hosting,dc=example,dc=tld
+dn = cn=phamm,o=hosting,dc=habitat,dc=im
 
 # Password for LDAP server, if dn is specified.
-dnpass = readonly
+dnpass = wolfman
 
 # Use SASL binding instead of the simple binding. Note that this changes
 # ldap_version automatically to be 3 if it's lower.
@@ -89,7 +89,7 @@ ldap_version = 3
 
 # LDAP base. %variables can be used here.
 # For example: dc=mail, dc=example, dc=org
-base = o=hosting,dc=example,dc=tld
+base = o=hosting,dc=habitat,dc=im
 
 # Dereference: never, searching, finding, always
 deref = never
@@ -107,6 +107,8 @@ scope = subtree
 # There are also other special fields which can be returned, see
 # http://wiki2.dovecot.org/UserDatabase/ExtraFields
 # user_attrs = homeDirectory=home,uidNumber=uid,gidNumber=gid
+
+user_attrs = quota=quota=maildir:storage
 
 # Filter for user lookup. Some variables can be used (see
 # http://wiki2.dovecot.org/Variables for full list):

@@ -4,7 +4,7 @@ objectClass: top
 o: hosting description: Hosting Organization
 # Read only account
 
-dn: cn=phamm,o=hosting,dc=example,dc=tld
+dn: cn=vmail,o=hosting,dc=example,dc=tld
 objectClass: simpleSecurityObject
 objectClass: organizationalRole
 cn: vmail
