@@ -15,3 +15,5 @@ olcAccess: to dn.regex=".+,dc=tld$" by dn="cn=admin,dc=example,dc=tld" write by 
 olcAccess: to attrs=userPassword,shadowLastChange by dn="cn=admin,dc=example,dc=tld" write by anonymous auth by self write by * none
 olcAccess: to dn.base="" by * read
 olcAccess: to * by dn="cn=admin,dc=example,dc=tld" write by * read
+olcaccess: to dn.regex=".+,vd=([^,]+),o=hosting,dc=example,dc=tld$" attrs=cn,sn,givenName,telephoneNumber,homePhone,mobile,fax,pager by dn="cn=admin,dc=example,dc=tld" write by self write by anonymous read by dn.exact="cn=vmail,o=hosting,dc=example,dc=tld" read by dn.exact,expand="cn=postmaster,vd=$1,o=hosting,dc=example,dc=tld" write by set.expand="user/vd & [$1]" write
+olcaccess: to dn.regex=".+,vd=([^,]+),o=hosting,dc=example,dc=tld$" attrs=mail by dn="cn=admin,dc=example,dc=tld" write by self read by anonymous read         by dn.exact="cn=phamm,o=hosting,dc=example,dc=tld" read by dn.exact,expand="cn=postmaster,vd=$1,o=hosting,dc=example,dc=tld" write by set.expand="user/vd & [$1]" write
