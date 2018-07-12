@@ -16,11 +16,11 @@ LDAPURI="ldap://localhost:389/"
 BINDDN="cn=admin,dc=example,dc=tld"
 BINDPW="password"
 LDAP_BASE="o=hosting,dc=example,dc=tld"
-OUTPUT="delete/list"
+OUTPUT="/tmp/list"
 
 touch $OUTPUT
 # find mail to delete
-ldapsearch -H $LDAPURI -D $BINDDN -w $BINDPW -b $LDAP_BASE -x -LLL "(&(objectClass=VirtualMailAccount)(delete=TRUE))" mailbox > delete/mb$$
+ldapsearch -H $LDAPURI -D $BINDDN -w $BINDPW -b $LDAP_BASE -x -LLL "(&(objectClass=VirtualMailAccount)(delete=TRUE))" mailbox > /tmp/mb$$
 # create file for awk
 sed \
 -e ':a' \
