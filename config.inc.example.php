@@ -61,16 +61,16 @@ define ('LDAP_BASE','o=hosting,dc=example,dc=tld');
 // *============================*
 
 // Page title
-define('ORG_TITLE','Phamm');
+define('ORG_TITLE','vMailpanel');
 
 // URL
-define('ORG_URL','http://www.phamm.org');
+define('ORG_URL','https://github.com/wolfman68/vMailpanel');
 
 // Logo
-define('ORG_LOGO', './img/phamm_logo.svg');
+define('ORG_LOGO', './img/logo.jpg');
 
 // CSS Style
-$style = 'phamm';
+$style = 'vmail';
 
 // Default language
 define ('DEFAULT_LANGUAGE','en_GB');
